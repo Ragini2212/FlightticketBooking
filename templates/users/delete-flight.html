@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block more_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/delete-flight.css' %}">
+{% endblock more_styles %}
+
+{% block content %}
+<h1>Delete Flight</h1>
+<p>Are you sure you want to delete Flight {{ flight.name }}?</p>
+<form class="delete-form" action="#" method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block more_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/view-bookings.css' %}">
+    
+{% endblock more_styles %}
+
+
+{% block content %}
+
+<h1>View Bookings</h1>
+        <table class="booking-table">
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>Time</th>
+                    <th>Booked By</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking.flight.name }}</td>
+                    <td>{{ booking.flight.departure_time }}</td>
+                    <td>{{ booking.user.username }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+{% endblock content %}

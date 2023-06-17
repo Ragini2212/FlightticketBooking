@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Booking - Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    {% block more_styles %}
+    
+    {% endblock more_styles %}
+</head>
+<body>
+
+    {% include 'partials/navbar.html' %}
+
+    {% include 'partials/message.html' %}
+
+
+    <main>
+        {% block content %}
+    
+    
+    
+        {% endblock content %}
+    </main>
+    
+    {% include 'partials/footer.html' %}
+</body>
+</html>

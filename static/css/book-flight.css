@@ -1,0 +1,22 @@
+.flight-details {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .book-flight-form input[type="number"],
+  .book-flight-form button[type="submit"] {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .book-flight-form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .book-flight-form button[type="submit"]:hover {
+    background-color: #555;
+  }

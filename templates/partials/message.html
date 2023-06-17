@@ -1,0 +1,41 @@
+<style>
+    .messages {
+        margin: 20px;
+    }
+    
+    .message {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .message-success {
+        background-color: #4CAF50;
+    }
+    
+    .message-info {
+        background-color: #2196F3;
+    }
+    
+    .message-warning {
+        background-color: #FF9800;
+    }
+    
+    .message-error {
+        background-color: #F44336;
+    }
+</style>
+
+
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="message message-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

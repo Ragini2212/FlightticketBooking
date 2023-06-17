@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block more_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    
+{% endblock more_styles %}
+
+
+{% block content %}
+
+
+        <h1>Welcome to Flight Booking</h1>
+        <div class="search-form">
+            <h2>Find Your Flight</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="departure_date">Departure Date:</label>
+                    <input type="date" id="departure_date" name="departure_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="departure_time">Departure Time:</label>
+                    <input type="time" id="departure_time" name="departure_time" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Search Flights">
+                </div>
+            </form>
+        </div>
+
+        {% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block more_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/book-flight.css' %}">
+    
+{% endblock more_styles %}
+
+
+{% block content %}
+        
+        
+<h1>Book Flight</h1>
+        <div class="flight-details">
+            <h2>{{ flight.name }}</h2>
+            <p><strong>Destination:</strong> {{ flight.destination }}</p>
+            <p><strong>Departure Date:</strong> {{ flight.departure_date }}</p>
+            <p><strong>Departure Time:</strong> {{ flight.departure_time }}</p>
+            <p><strong>Available Seats:</strong> {{ flight.seat_count }}</p>
+        </div>
+        <form class="book-flight-form" action="#" method="post">
+            {% csrf_token %}
+            <input type="number" name="seat_count" placeholder="Number of Seats" min="1" max="{{ flight.seat_count }}">
+            <button type="submit">Book Now</button>
+        </form>
+ 
+
+{% endblock content %}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Booking - Confirmation</title>
+    <style>
+       
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.confirmation {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-top: auto;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search Flights</a></li>
+                <li><a href="#">Book a Flight</a></li>
+                <li><a href="#">My Bookings</a></li>
+                <li><a href="#">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Booking Confirmation</h1>
+        <div class="confirmation">
+            <h2>Your Flight Booking is Confirmed!</h2>
+            <p>Flight Number: ABC123</p>
+            <p>Date: 2023-06-18</p>
+            <p>Time: 09:00 AM</p>
+            <p>Destination: New York</p>
+            <p>Seat Number: A23</p>
+            <p>Passenger Name: John Doe</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Flight Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>

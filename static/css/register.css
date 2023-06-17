@@ -1,0 +1,54 @@
+
+
+.login-form,
+.register-form {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-form input,
+.register-form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.login-form button,
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form button:hover,
+.register-form button:hover {
+    background-color: #555;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.register-form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.register-form button[type="submit"]:hover {
+    background-color: #555;
+}

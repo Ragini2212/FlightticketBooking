@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block more_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/view-flights.css' %}">
+{% endblock more_styles %}
+
+{% block content %}
+<h1>View Flights</h1>
+<table class="flight-table">
+    <thead>
+        <tr>
+            <th>Flight Number</th>
+            <th>Destination</th>
+            <th>Departure Time</th>
+            <th>Seat Count</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for flight in flights %}
+        <tr>
+            <td>{{ flight.name }}</td>
+            <td>{{ flight.destination }}</td>
+            <td>{{ flight.departure_time|time:"H:i A" }}</td>
+            <td>{{ flight.seat_count }}</td>
+            <td>
+                <a href="{% url 'update_flight' flight.id %}" class="update-button">Update Flight</a>
+                <a href="{% url 'delete_flight' flight.id %}" class="delete-button">Delete Flight</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No flights available.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

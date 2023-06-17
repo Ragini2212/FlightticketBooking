@@ -1,0 +1,32 @@
+/* Update Flight Form */
+.flight-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.flight-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.flight-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.flight-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.flight-form button:hover {
+    background-color: #45a049;
+}
+
